@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Cek followers dan following Instagram secara lokal di browser.">
+  <title>IG FollowCheck — Followers Analyzer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#">IG<span>FollowCheck</span></a>
+    <a class="nav-link" href="#cara-pakai">Cara pakai</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="badge">🔒 100% lokal di browser</div>
+      <h1>Cek siapa yang<br><span>tidak follow balik.</span></h1>
+      <p class="lead">
+        Masukkan daftar <b>followers</b> dan <b>following</b> Instagram milikmu.
+        Website ini membandingkannya langsung di perangkatmu tanpa mengirim data ke server.
+      </p>
+      <a class="primary-btn" href="#analyzer">Mulai cek <span>↓</span></a>
+      <p class="tiny">Tidak perlu password Instagram.</p>
+    </section>
+
+    <section id="analyzer" class="panel">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">ANALYZER</div>
+          <h2>Bandingkan daftar akun</h2>
+        </div>
+        <button id="demoBtn" class="ghost-btn">Isi contoh</button>
+      </div>
+
+      <div class="inputs">
+        <div class="input-card">
+          <div class="card-title"><span class="dot green"></span> Followers</div>
+          <p>Username yang mengikuti kamu.</p>
+          <textarea id="followers" placeholder="contoh:
+instagram
+username_kamu
+teman01"></textarea>
+          <div class="input-foot"><span id="followersCount">0</span> akun</div>
+        </div>
+
+        <div class="input-card">
+          <div class="card-title"><span class="dot blue"></span> Following</div>
+          <p>Username yang kamu ikuti.</p>
+          <textarea id="following" placeholder="contoh:
+instagram
+teman01
+akun_yang_tidak_follow"></textarea>
+          <div class="input-foot"><span id="followingCount">0</span> akun</div>
+        </div>
+      </div>
+
+      <button id="analyzeBtn" class="analyze-btn">Analisis sekarang</button>
+
+      <div id="results" class="results hidden">
+        <div class="stats">
+          <div class="stat"><span id="statFollowers">0</span><small>Followers</small></div>
+          <div class="stat"><span id="statFollowing">0</span><small>Following</small></div>
+          <div class="stat"><span id="statNotFollowBack">0</span><small>Tidak follow balik</small></div>
+          <div class="stat"><span id="statMutual">0</span><small>Saling follow</small></div>
+        </div>
+
+        <div class="result-head">
+          <div>
+            <div class="eyebrow">HASIL</div>
+            <h3>Tidak follow balik</h3>
+          </div>
+          <div class="actions">
+            <button id="copyBtn" class="ghost-btn">Salin daftar</button>
+            <button id="downloadBtn" class="ghost-btn">Download TXT</button>
+          </div>
+        </div>
+        <div id="resultList" class="result-list"></div>
+      </div>
+    </section>
+
+    <section id="cara-pakai" class="how">
+      <div class="eyebrow">CARA PAKAI</div>
+      <h2>Simple. Lokal. Tanpa password.</h2>
+      <div class="steps">
+        <article><b>01</b><h3>Siapkan data</h3><p>Salin username dari daftar followers dan following Instagram milikmu.</p></article>
+        <article><b>02</b><h3>Masukkan</h3><p>Tempel followers di kolom kiri dan following di kolom kanan.</p></article>
+        <article><b>03</b><h3>Analisis</h3><p>Klik analisis untuk melihat akun yang kamu ikuti tetapi tidak mengikuti balik.</p></article>
+      </div>
+    </section>
+
+    <section class="privacy">
+      <div class="privacy-icon">🛡️</div>
+      <div>
+        <h3>Privasi diutamakan</h3>
+        <p>Data yang kamu masukkan diproses menggunakan JavaScript di browser. Tidak ada login Instagram dan tidak ada pengiriman daftar ke server pada website ini.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>IG FollowCheck</span>
+    <span>Made for local use · GitHub Pages ready</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
